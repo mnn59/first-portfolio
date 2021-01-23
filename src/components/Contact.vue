@@ -42,8 +42,14 @@
           </a>
         </v-col>
       </v-row>
+      <br>
+      <br>
+      <v-row>
+        <v-col class="text-center">
+          © Made with ❤️ By <b>Mahdi</b> 2021. All Rights Reserved
+        </v-col>
+      </v-row>
     </v-container>
-    <br />
   </section>
 </template>
 

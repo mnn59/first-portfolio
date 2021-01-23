@@ -1,7 +1,5 @@
 <template>
-  <section 
-  class="education-section"
-  id="education">
+  <section class="education-section" id="education">
     <v-container>
       <v-row>
         <v-col>
@@ -29,6 +27,9 @@
                 >
                   {{ year.title }}
                 </h2>
+                <h3 class="mb-1">
+                  {{ year.subTitle }}
+                </h3>
 
                 <!-- <g-image 
                 src="~/helli.jpg"
@@ -74,8 +75,9 @@ export default {
           color: "cyan",
           year: "1391-1395",
           title: "Allameh Helli High School",
+          subTitle: "Mathematics and Physics",
           description:
-            " Mathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics loremMathematics and Physics lorem",
+            "I have studied at helli high school. Allameh Helli Schools, named after Al-Hilli, are schools found in various cities of Iran. Students study subjects in depth, similar to college courses. Allameh Helli Schools are for boys only, while ...",
           site: "https://helli.ir",
           image: "~/helli.jpg",
         },
@@ -83,12 +85,21 @@ export default {
           color: "purple",
           year: "1396-1401",
           title: "Amirkabir University of Technology",
+          subTitle: "Computer Engineering",
           description:
-            "Computer Engineering lorem Computer Engineering loremComputer Engineering loremComputer Engineering loremComputer Engineering loremComputer Engineering loremComputer Engineering loremComputer Engineering lorem Computer Engineering loremComputer Engineering loremComputer Engineering loremComputer Engineering lorem",
+            "AUT was the second established technical university in Iran  and is referred to as the Mother of Engineering Universities.The university was founded in 1928 as a standard academy, and developed to the university of technology by Habib Nafisi in 1956, after ... ",
           site: "https://aut.ac.ir/en",
         },
       ],
     };
+  },
+  methods: {
+    truncate(str) {
+      if (str.length > 50) {
+        return str.slice(0, 49) + "...";
+      }
+      return str;
+    },
   },
 };
 </script>
