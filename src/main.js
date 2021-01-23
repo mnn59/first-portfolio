@@ -15,6 +15,7 @@ export default function (Vue, { appOptions, head }) {
   
   const opts = {} //opts includes, vuetify themes, icons, etc.
   Vue.use(Vuetify)
+
   
   appOptions.vuetify = new Vuetify(opts);
   
